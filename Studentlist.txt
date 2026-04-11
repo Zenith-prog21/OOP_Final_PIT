@@ -1,0 +1,3 @@
+Name:                           | Student ID:              | Book Borrowed/Returned:  | Book ID:      | Action:           |
+ Aloysius Q. Gonzaga            | 2023100147               | Better Than The Movies   | 2             | Borrow            |
+ Someone Else                   | 202300000                | Better Than The Movies   | 2             | Borrow            |
