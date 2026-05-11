@@ -20,10 +20,11 @@ public class File_Manager {
                     String[] part = buffer.split("\\|");
                     int Book_ID = Integer.parseInt(part[0].trim());
                     String Book_name = part[1].trim();
-                    String Author = part[2].trim();
-                    int Book_Quantity = Integer.parseInt(part[3].trim());
-                    int Book_Available = Integer.parseInt(part[4].trim());
-                    Book_Setup book = new Book_Setup(Book_ID, Book_name, Author, Book_Quantity, Book_Available);
+                    String Book_Genre = part[2].trim();
+                    String Author = part[3].trim();
+                    int Book_Quantity = Integer.parseInt(part[4].trim());
+                    int Book_Available = Integer.parseInt(part[5].trim());
+                    Book_Setup book = new Book_Setup(Book_ID, Book_name, Book_Genre, Author, Book_Quantity, Book_Available);
                     books.add(book);
                 }
         } catch (
@@ -70,7 +71,7 @@ public class File_Manager {
         try (BufferedWriter file = new BufferedWriter(new FileWriter(filePath))) {
             System.out.println("Saving file");
             if(choice == 1){
-                file.write("ID:   | Title:                                            | Author:                  | Quantity  | Available");
+                file.write("ID:   | Title:                                            | Genre:                   | Author:                  | Quantity  | Available");
                 file.newLine();
             } else if (choice == 2) {
                 file.write("Name:                           | Student ID:              | Book Borrowed/Returned:  | Book ID:      | Action:           |");

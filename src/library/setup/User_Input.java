@@ -16,7 +16,7 @@ public class User_Input {
                 if (input >= min && input <= max) {
                     return input;
                 } else {
-                    System.out.printf("\nInvalid input! Please enter between %d and %d", min, max);
+                    System.out.printf("\nInvalid input! Please enter between %d and %d\n", min, max);
                     return 0;
                 }
             } else {

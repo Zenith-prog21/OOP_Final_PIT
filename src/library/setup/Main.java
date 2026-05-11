@@ -6,18 +6,26 @@ class Main{
   public static final int exit = 6;
     User_Input scan = new User_Input();
     File_Manager fm = new File_Manager();
+    
     ArrayList<Book_Setup> Books  = fm.setup_books();
     ArrayList<Student_Log> student  = fm.setup_student();
+    
     Book_Setup book_setup = new Book_Setup();
     Student_Log student_log = new Student_Log();
 
+    
+    // Constants
     String Book_file = "Booklist.txt";
     String Student_file = "Studentlist.txt";
     int Student = 2, book = 1;
-
+    
     public static void main(String[] args) {
-        new Main().system_run();
+        Library_GUI.main(args); // swap to GUI entry point
     }
+
+	/*
+	 * public static void main(String[] args) { new Main().system_run(); }
+	 */
 
      void system_run(){
         int choice;
@@ -73,12 +81,15 @@ class Main{
 
           Book_ID = scan.input_integer("Enter Book ID: ",1, Books.size());
 
+          if (Book_ID == 0) {
+        	  return;
+          }
           for (Book_Setup Book: Books) {
               if(Book_ID == Book.Book_ID) {
                   if (!Book.check_availability() && type == BORROW){
                       System.out.println("Book Unavailable. Sorry!");
                         return;
-                  } else if (!Book.check_availability() && type == BORROW) {
+                  } else if (!Book.check_availability() && type == RETURN) {
                       System.out.println("Error!! Book Quantity is already Full.");
                       return;
                   }
@@ -126,7 +137,7 @@ class Main{
       }
        void See_Available_Books(){
            System.out.println();
-           System.out.println("ID:  | Title:                                            | Author:                  | Quantity  | Available");
+           System.out.println("ID:  | Title:                                            | Genre:                   | Author:                  | Quantity  | Available");
            System.out.println("====================================================================================================");
            for (Book_Setup b : Books){
                System.out.println(b);
