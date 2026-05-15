@@ -1,3 +1,31 @@
 ID:   | Title:                                            | Genre:                   | Author:                  | Quantity  | Available
-1     | The Coral Coffin                                  | Michael Dahl             | 6                        | 4         | 4
-2     | Better Than The Movies                            | Lynn Painter             | 9                        | 6         | 6
+1     | The Coral Coffin                                  | Fiction                  | Michael Dahl             | 6         | 3   
+2     | Better Than The Movies                            | Romance                  | Lynn Painter             | 9         | 7   
+3     | Introduction to Java Programming                  | Programming              | Daniel Liang             | 8         | 8   
+4     | Clean Code                                        | Programming              | Robert Martin            | 5         | 3   
+5     | Data Structures and Algorithms                    | Computer Science         | Michael Goodrich         | 7         | 6   
+6     | Physics for Scientists and Engineers              | Physics                  | Raymond Serway           | 6         | 5   
+7     | University Physics                                | Physics                  | Hugh Young               | 4         | 2   
+8     | Calculus Early Transcendentals                    | Mathematics              | James Stewart            | 10        | 9   
+9     | Discrete Mathematics and Its Applications         | Mathematics              | Kenneth Rosen            | 6         | 6   
+10    | Organic Chemistry                                 | Chemistry                | David Klein              | 5         | 4   
+11    | Biology                                           | Biology                  | Sylvia Mader             | 7         | 5   
+12    | The Great Gatsby                                  | Classic Fiction          | F. Scott Fitzgerald      | 8         | 8   
+13    | To Kill a Mockingbird                             | Classic Fiction          | Harper Lee               | 6         | 4   
+14    | Pride and Prejudice                               | Romance                  | Jane Austen              | 5         | 5   
+15    | Frankenstein                                      | Gothic Fiction           | Mary Shelley             | 4         | 3   
+16    | The Hobbit                                        | Fantasy                  | J.R.R. Tolkien           | 7         | 6   
+17    | Harry Potter and the Sorcerer's Stone             | Fantasy                  | J.K. Rowling             | 9         | 8   
+18    | The Lightning Thief                               | Fantasy                  | Rick Riordan             | 6         | 6   
+19    | Dune                                              | Science Fiction          | Frank Herbert            | 5         | 3   
+20    | The Martian                                       | Science Fiction          | Andy Weir                | 4         | 4   
+21    | A Brief History of Time                           | Science                  | Stephen Hawking          | 3         | 1   
+22    | The Selfish Gene                                  | Science                  | Richard Dawkins          | 4         | 3   
+23    | Atomic Habits                                     | Self Help                | James Clear              | 10        | 7   
+24    | The 7 Habits of Highly Effective People           | Self Help                | Stephen Covey            | 6         | 5   
+25    | Rich Dad Poor Dad                                 | Finance                  | Robert Kiyosaki          | 8         | 6   
+26    | The Psychology of Money                           | Finance                  | Morgan Housel            | 5         | 4   
+27    | The Art of War                                    | Philosophy               | Sun Tzu                  | 6         | 6   
+28    | Meditations                                       | Philosophy               | Marcus Aurelius          | 5         | 5   
+29    | Noli Me Tangere                                   | Philippine Literature    | Jose Rizal               | 10        | 9   
+30    | El Filibusterismo                                 | Philippine Literature    | Jose Rizal               | 10        | 8   

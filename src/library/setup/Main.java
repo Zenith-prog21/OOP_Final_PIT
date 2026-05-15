@@ -24,8 +24,7 @@ class Main{
     }
 
 	/*
-	 * public static void main(String[] args) { new Main().system_run(); }
-	 */
+
 
      void system_run(){
         int choice;
@@ -172,6 +171,6 @@ class Main{
         fm.save_changes(student, Student_file, Student);
     }
 
-
+    */
 }
 

@@ -44,7 +44,7 @@ public class Book_Setup {
 
     @Override
     public String toString() {
-        return String.format("%-5d | %-50s| %-25s| %-10d| %-4d",
-                Book_ID, Book_Name, Author, Book_Quantity, Book_Available);
+        return String.format("%-5d | %-50s| %-25s| %-25s| %-10d| %-4d",
+                Book_ID, Book_Name, Book_Genre,  Author, Book_Quantity, Book_Available);
     }
 }

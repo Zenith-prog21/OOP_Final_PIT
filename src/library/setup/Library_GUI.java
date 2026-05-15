@@ -85,15 +85,20 @@ public class Library_GUI extends JFrame {
     private JPanel homePanel() {
         JPanel panel = new JPanel(new GridLayout(5, 1, 10, 10));
         panel.setBorder(BorderFactory.createEmptyBorder(40, 150, 40, 150));
-        panel.setBackground(Color.BLACK);
+        panel.setBackground(Color.WHITE);
         JLabel title = new JLabel("Library Book Manager", SwingConstants.CENTER);
         title.setFont(new Font("Georgia", Font.BOLD, 24));
-        title.setForeground(Color.WHITE);
+        title.setForeground(Color.BLACK);
 
         JButton availableButton = new JButton("Check Available Books");
         JButton borrowButton = new JButton("Borrow Book");
         JButton returnButton = new JButton("Return Book");
         JButton adminButton = new JButton("Admin");
+
+        availableButton.setPreferredSize(new Dimension(150, 30));
+        borrowButton.setPreferredSize(new Dimension(150, 30));
+        returnButton.setPreferredSize(new Dimension(150, 30));
+        adminButton.setPreferredSize(new Dimension(150, 30));
 
         availableButton.addActionListener(e -> {
             refreshData();
@@ -178,9 +183,9 @@ public class Library_GUI extends JFrame {
 
 
         JLabel title = new JLabel("Borrow Book", SwingConstants.CENTER);
-        title.setFont(new Font("Georgia", Font.BOLD, 20));
+        title.setFont(new Font("Arial", Font.BOLD, 20));
 
-        JPanel form = new JPanel(new GridLayout(6, 2, 10, 10));
+        JPanel form = new JPanel(new GridLayout(5, 2, 10, 10));
         form.setBorder(BorderFactory.createEmptyBorder(40, 100, 40, 100));
 
         JTextField nameField = new JTextField();
@@ -190,6 +195,7 @@ public class Library_GUI extends JFrame {
         JButton backButton = new JButton("Back");
         JButton borrowButton = new JButton("Borrow");
         JButton availableButton = new JButton("Check Available Books");
+        availableButton.setPreferredSize(new Dimension(200, 40));
 
 
         form.add(new JLabel("Student Name:"));
@@ -256,12 +262,17 @@ public class Library_GUI extends JFrame {
             bookIdField.setText("");
         });
 
-        availableButton.addActionListener(e -> cardLayout.show(mainPanel, "AVAILABLE"));
+        availableButton.addActionListener(e -> {
+            refreshData();
+            mainPanel.add(availableBooksPanel("BORROW"), "AVAILABLE");
+            cardLayout.show(mainPanel, "AVAILABLE");
+        });
+
         backButton.addActionListener(e -> cardLayout.show(mainPanel, "HOME"));
 
         panel.add(title, BorderLayout.NORTH);
-        panel.add(form, BorderLayout.EAST);
-        panel.add(availableButton, BorderLayout.CENTER);
+        panel.add(form, BorderLayout.CENTER);
+        panel.add(availableButton, BorderLayout.SOUTH);
 
 
         return panel;
@@ -276,7 +287,7 @@ public class Library_GUI extends JFrame {
         JLabel title = new JLabel("Return Book", SwingConstants.CENTER);
         title.setFont(new Font("Georgia", Font.BOLD, 20));
 
-        JPanel form = new JPanel(new GridLayout(5, 2, 10, 10));
+        JPanel form = new JPanel(new GridLayout(4, 2, 10, 10));
         form.setBorder(BorderFactory.createEmptyBorder(40, 100, 40, 100));
 
         JTextField nameField = new JTextField();
@@ -477,7 +488,7 @@ public class Library_GUI extends JFrame {
 
         addButton.addActionListener(e -> {
             String author = authorField.getText().trim();
-            String genre = authorField.getText().trim();
+            String genre = genreField.getText().trim();
             String title = titleField.getText().trim();
             String quantityText = quantityField.getText().trim();
 
@@ -523,9 +534,7 @@ public class Library_GUI extends JFrame {
         return panel;
     }
 
-    // =========================
-    // HELPER METHODS
-    // =========================
+    // Encapsulated Methods
     private Book_Setup findBookById(int id) {
         for (Book_Setup book : books) {
             if (book.Book_ID == id) {
